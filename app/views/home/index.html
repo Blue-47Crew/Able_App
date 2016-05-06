@@ -58,7 +58,7 @@
                     <li>
                         <a class="page-scroll" href="#services">Services</a>
                     </li>
-                
+
                    <!-- <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
@@ -79,13 +79,13 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                
-            <div class="intro-heading">Able App</div> 
-                
+
+            <div class="intro-heading">Able App</div>
+
                 <div class="intro-lead-in">Meeting your Medical Transportation Needs</div>
-               
-                <a href="#services"  class=" mainbutton page-scroll btn btn-xl">Customer Registration</a>
-                <a href="#services" class=" mainbutton page-scroll btn btn-xl">Provider Registration</a>
+
+                <%= link_to 'Customer Registration', new_customer_session_path , class: "mainbutton page-scroll btn btn-xl" %>
+                <%= link_to 'Provider Registration', new_provider_session_path , class: "mainbutton page-scroll btn btn-xl"%>
             </div>
         </div>
     </header>
@@ -128,7 +128,7 @@
         </div>
     </section>
 
-    
+
 
     <!-- About Section -->
     <section id="about">
@@ -302,7 +302,7 @@
             </div>
         </div>
     </aside>
-    
+
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
