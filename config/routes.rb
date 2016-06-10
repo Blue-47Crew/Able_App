@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :providers do
-    get "/login" => "devise/sessions#new"
-  end
+  # devise_for :providers do
+  #   get "/login" => "devise/sessions#new"
+  # end
   devise_for :customers do
     get "/login" => "devise/sessions#new"
   end
-  get 'providers/home'
+  # get 'providers/home'
 
   get 'customers/home'
 
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resource :customers
-  resource :providers
+  # resource :providers
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,5 +1,7 @@
-<h2>Log in</h2>
 
+
+<h2>Log in</h2>
+<%= image_tag("header2.jpg") %>
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email, required: false, autofocus: true %>

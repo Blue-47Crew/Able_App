@@ -6,22 +6,20 @@
 #
 default: &default
   adapter: mysql2
-  pool: 5
   timeout: 5000
   database: ableapp
   username: root
   password: r1chmond
-  host: localhost
+  host: 127.0.0.1
 
 development:
   <<: *default
   adapter: mysql2
-  pool: 5
   timeout: 5000
   database: ableapp
   username: root
   password: r1chmond
-  host: localhost
+  host: 127.0.0.1
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
