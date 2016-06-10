@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # end
   devise_for :customers do
     get "/login" => "devise/sessions#new"
+    resources :customers
   end
   # get 'providers/home'
 
