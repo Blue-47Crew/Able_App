@@ -16,7 +16,7 @@ default: &default
   database: heroku_ce135a22bbe5153
   username: b95d02b2d85fb7
   password: 271030ba
-  host: b95d02b2d85fb7:271030ba@us-cdbr-iron-east-04.cleardb.net
+  host: us-cdbr-iron-east-04.cleardb.net
 
 development:
   <<: *default
@@ -24,7 +24,7 @@ adapter: mysql2
 database: heroku_ce135a22bbe5153
 username: b95d02b2d85fb7
 password: 271030ba
-host: b95d02b2d85fb7:271030ba@us-cdbr-iron-east-04.cleardb.net
+host: us-cdbr-iron-east-04.cleardb.net
 
 
 # Warning: The database defined as "test" will be erased and
