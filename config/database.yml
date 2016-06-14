@@ -4,13 +4,20 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
+# default: &default
+#   adapter: mysql2
+#   timeout: 5000
+#   database: ableapp
+#   username: root
+#   password: r1chmond
+#   host: 127.0.0.1
 default: &default
   adapter: mysql2
   timeout: 5000
-  database: ableapp
-  username: root
-  password: r1chmond
-  host: 127.0.0.1
+  database: heroku_ce135a22bbe5153
+  username: b95d02b2d85fb7
+  password: 271030ba
+  host: b95d02b2d85fb7:271030ba@us-cdbr-iron-east-04.cleardb.net
 
 development:
   <<: *default
