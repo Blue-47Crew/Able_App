@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :customers do
     get "/login" => "devise/sessions#new"
     resources :customers
+    resources :requests
   end
   # get 'providers/home'
 
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resource :customers
+  resource :requests
   # resource :providers
 
   # Example of regular route:
