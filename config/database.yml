@@ -37,9 +37,4 @@ test:
 
 production:
   <<: *default
-    adapter: mysql2
-    timeout: 5000
-    database: heroku_ce135a22bbe5153
-    username: b95d02b2d85fb7
-    password: 271030ba
-    host: us-cdbr-iron-east-04.cleardb.net
+    database: db/test.sqlite3
