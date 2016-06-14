@@ -13,6 +13,7 @@
 #   host: 127.0.0.1
 default: &default
   adapter: mysql2
+  timeout: 5000
   database: heroku_ce135a22bbe5153
   username: b95d02b2d85fb7
   password: 271030ba
@@ -21,6 +22,7 @@ default: &default
 development:
   <<: *default
 adapter: mysql2
+timeout: 5000
 database: heroku_ce135a22bbe5153
 username: b95d02b2d85fb7
 password: 271030ba
