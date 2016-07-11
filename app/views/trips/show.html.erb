@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>To location:</strong>
+  <%= @trip.to_location %>
+</p>
+
+<p>
+  <strong>From location:</strong>
+  <%= @trip.from_location %>
+</p>
+
+<%= link_to 'Edit', edit_trip_path(@trip) %> |
+<%= link_to 'Back', trips_path %>
