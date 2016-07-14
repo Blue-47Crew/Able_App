@@ -4,37 +4,22 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
-# default: &default
-#   adapter: mysql2
-#   timeout: 5000
-#   database: ableapp
-#   username: root
-#   password: r1chmond
-#   host: 127.0.0.1
 default: &default
   adapter: sqlite3
+  pool: 5
   timeout: 5000
-  database: heroku_ce135a22bbe5153
-  username: b95d02b2d85fb7
-  password: 271030ba
-  host: us-cdbr-iron-east-04.cleardb.net
 
 development:
   <<: *default
-  adapter: sqlite3
-  timeout: 5000
-  database: ableapp
-  username: root
-  password: r1chmond
-  host: 127.0.0.1
+  database: db/ableapp_dev.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: db/ableapp_test.sqlite3
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: db/ableapp.sqlite3

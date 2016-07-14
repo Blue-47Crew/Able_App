@@ -50,12 +50,12 @@ ActiveRecord::Schema.define(version: 20160711213949) do
   add_index "providers", ["reset_password_token"], name: "index_providers_on_reset_password_token", unique: true
 
   create_table "trips", force: :cascade do |t|
-    t.text     "origin1"
-    t.text     "origin2"
-    t.text     "destinationA"
-    t.text     "destinationB"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "origin1"
+    t.string   "origin2"
+    t.string   "destinationA"
+    t.string   "destinationB"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|
