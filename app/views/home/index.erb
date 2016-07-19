@@ -1,4 +1,42 @@
 <!-- Header -->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#aboutus">About<br> Able App</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+
+                <li>
+                      <%= link_to 'Sign-Up', new_customer_registration_path , class: "page-scroll" %>
+                </li>
+                <li>
+
+                      <%= link_to 'Sign-In', new_customer_session_path , class: "page-scroll" %>
+                </li>
+                <li>
+                    <a class="page-scroll" href="providerreg.html">Want to Drive for Able?<br> Driver Registration</a>
+                </li>
+
+                 <li>
+
+                      <%= link_to 'Provider Log-in', new_customer_session_path , class: "page-scroll" %>
+                </li>
+
+                                </ul>
+        </div>
+
+    </div>
+
     <header>
         <div class="container">
             <div class="intro-text">
