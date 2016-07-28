@@ -1,4 +1,6 @@
 
+
+
 // Fare calulation
   var pickupX = 20;
   var pickupY= 15;
