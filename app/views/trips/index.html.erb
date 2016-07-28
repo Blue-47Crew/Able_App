@@ -5,8 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Origin</th>
-      <th>Destination</th>
+      <th>Start</th>
+    </br>
+      <th>End</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +15,8 @@
   <tbody>
     <% @trips.each do |trip| %>
       <tr>
-        <td><%= trip.origin2 %></td>
-        <td><%= trip.destinationA %></td>
+        <td><%= trip.start_address %></td>
+        <td><%= trip.end_address %></td>
         <td><%= link_to 'Show', trip %></td>
         <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
         <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
