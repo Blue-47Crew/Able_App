@@ -11,12 +11,16 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
-#Ignore database.yml
+# Ignore database.yml
 config/*.yml
+
+# Ignore file:
+/config/initializers/geocoder.rb
+
 
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
 /tmp
 /.DS_Store
-/*.DS_Store
+*.DS_Store
