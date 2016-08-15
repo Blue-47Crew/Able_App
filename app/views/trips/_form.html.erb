@@ -42,6 +42,15 @@
   <div class="total_miles">
   </div>
 </p>
+
+<p>
+  <strong>Base Fare</strong>
+  <div class="base_fare">
+  </div>
+</p>
+
+
+
 <p>
   <strong>Total Fare</strong>
   <div class="total_fare">
@@ -123,17 +132,20 @@ function calculate_fare_per_mile(mile,trip_type,car_type){
  if (mile < 10) {
   console.log('mile');
     if (trip_type == 'Single' && car_type == "Wheelchair" ){
+      $('.base_fare').html('$ '+ 20)
       $('.total_fare').html('$' + (20+2*mile))
 }
 else if(trip_type == 'Single' && car_type == "Single"){
+   $('.base_fare').html('$ '+ 15)
    $('.total_fare').html('$' + (15+1.5*mile))
 }
 else if(trip_type == 'Roundtrip' && car_type == "Wheelchair"){
-    $('.total_fare').html(' ')
+   $('.base_fare').html('$ '+60)
     $('.total_fare').html('$ ' + (60+2*mile))
 
 }
 else if(trip_type == 'Roundtrip' && car_type == "Single"){
+  $('.base_fare').html('$ '+40)
    $('.total_fare').html('$' + (40+1.5*mile))
 }
 else{
@@ -144,15 +156,19 @@ else{
  }
  else if (mile > 10 && mile < 16) {
     if (trip_type == 'Single' && car_type == "Wheelchair" ){
+      $('.base_fare').html('$ '+20)
        $('.total_fare').html('$' + (20+2*mile))
     }
     else if(trip_type == 'Single' && car_type == "Single"){
+      $('.base_fare').html('$ '+20)
        $('.total_fare').html('$' + (15+1.5*mile))
     }
   else if(trip_type == 'Roundtrip' && car_type == "Wheelchair"){
+    $('.base_fare').html('$ '+80)
      $('.total_fare').html('$' + (80+2*mile))
   }
   else if(trip_type == 'Roundtrip' && car_type == "Single"){
+    $('.base_fare').html('$ '+65)
      $('.total_fare').html('$' +(65+1.5*mile))
   }
 else{
@@ -162,17 +178,23 @@ else{
  }
 else{
     if (trip_type == 'Single' && car_type == "Wheelchair" ){
+      $('.base_fare').html('$ '+20)
        $('.total_fare').html('$' + (20+2*mile))
 }
 else if(trip_type == 'Single' && car_type == "Single"){
+   $('.base_fare').html('$ '+15)
    $('.total_fare').html('$' + (15+1.5*mile))
 }
 else if(trip_type == 'Roundtrip' && car_type == "Wheelchair"){
-   $('.total_fare').html('$' + (20+2*mile))
+  $('.base_fare').html('free discount on total')
+  discounted_price = 2*mile*0.2
+   $('.total_fare').html('$' + (2*mile - (discounted_price)))
 
 }
 else if(trip_type == 'Roundtrip' && car_type == "Single"){
-   $('.total_fare').html('$' + (15+1.5*mile))
+  $('.base_fare').html('free 20% discount on total')
+  discounted_price = 1.5*mile*0.2
+   $('.total_fare').html('$' + (1.5*mile - (discounted_price)))
 }
 else{
   alert('no match')
