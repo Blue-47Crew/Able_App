@@ -2,6 +2,7 @@
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="col-md-3">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
@@ -11,8 +12,9 @@
             </button>
             <a class="navbar-brand page-scroll" href="#aboutus">About<br> Able App</a>
         </div>
-
+</div>
         <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="col-md-9">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
 
@@ -31,22 +33,26 @@
 
                       <%= link_to 'Provider Log-in', new_customer_session_path , class: "page-scroll" %>
                 </li>
+                 <li>
+                    <a class="page-scroll" href="#services">Services</a>
+                </li>
 
                                 </ul>
         </div>
-
+</div>
     </div>
+    </nav>
 
     <header>
         <div class="container">
-            <div class="intro-text">
+            <div class="header-content">
 
-            <div class="intro-heading">Able App</div>
-
+            <div class="header-content-inner"><h1 style="font-size: 65px;">Able App</h1>
+<hr>
                 <div class="intro-lead-in">Meeting your Medical Transportation Needs</div>
-
-                <%= link_to 'Schedule A Trip', new_customer_session_path , class: "mainbutton page-scroll btn btn-xl" %>
-
+<br>
+                <%= link_to 'Schedule A Trip', new_customer_session_path , class: "mainbutton page-scroll btn-primary btn btn-xl" %>
+</div>
             </div>
         </div>
     </header>
