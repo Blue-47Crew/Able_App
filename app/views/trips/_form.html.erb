@@ -1,4 +1,8 @@
  <div class="container">
+ <div class="row">
+
+  <div  class="col-md-0"></div>
+  <div  class="col-md-12">
 <script type="text/javascript"
      src="http://maps.google.com/maps/api/js?sensor=true">
 </script> 
@@ -6,36 +10,52 @@
 
 <%= simple_form_for(@trip) do |f| %>
   <%= f.error_notification %>
+<form class="form-horizontal">
+      <fieldset>
 
-
-  <h2>Start</h2>
-
-  <div class="form-inputs">
-    <%= f.input :start_address %>
-    <%= f.input :start_city%>
-    <%= f.input :start_state %>
-     <div class="form-group">
-     <%= f.label :end_address, 'destination'%>
-    <%= f.text_field :end_address,:class => 'form-control' %>
-    </div>
-    
-    <%= f.input :end_zipcode %>
-     </div>
-      <div class="form-group">
+      <!-- Form Name -->
+      <h1 class="text-center">Start</h1>
+      <div class="form-group">  
+        <div class="col-md-4">
+    <%= f.input :start_address,:class => 'form-control input-md' %>     
+        </div>
+        <div class="col-md-4">
+    <%= f.input :start_city ,:class => 'form-control input-md'%>     
+        </div>
+        <div class="col-md-4">
+    <%= f.input :start_state,:class => 'form-control input-md' %>     
+        </div>
+        </div>
+        <div class="form-group">  
+        <div class="col-md-4">
+    <%= f.input :end_address,:class => 'form-control input-md'%>     
+        </div>
+        <div class="col-md-4">
+    <%= f.input :end_address,:class => 'form-control input-md' %>     
+        </div>
+        <div class="col-md-4">
+    <%= f.input :end_zipcode,:class => 'form-control input-md' %>     
+        </div>
+        </div>
+         <div class="form-group">  
+        <div class="col-md-6">
     <%= f.label :car_type%>
-   <%= f.select(:car_type, ['Wheelchair', 'Single'], {}, { :class => 'form-control' }) %>
-    </div>
-    <div class="form-group">
-  <%= f.label :trip_type%>
+    <%= f.select(:car_type, ['Wheelchair', 'Single'], {}, { :class => 'form-control' }) %>    
+        </div>
+        <div class="col-md-6">
+    <%= f.label :trip_type%>
    <%= f.select(:trip_type, ['Roundtrip', 'Single'], {}, { :class => 'form-control' }) %>
-    &ensp;
-    </div>
-
-
-<button type="button" class="btn btn-primary" onclick="calculate_fare()">Check fare</button>
-  <h2>End</h2>
-
-
+   
+        </div>
+      
+        </div>  
+      
+         <div class="form-group"> 
+         
+        <div class="col-md-2">
+  <button type="button" style="margin-top: 10px;" class="btn btn-primary" onclick="calculate_fare()">Check fare</button>
+</div>
+</div>
 <div class="calculation hidden">
 <p>
   <strong>Total Miles</strong>
@@ -57,22 +77,20 @@
   </div>
 </p>
 </div>
-
-
-<p>
-  <strong>Latitude:</strong>
-  <%= @trip.latitude %>
-</p>
-<p>
-  <strong>Longitude:</strong>
-  <%= @trip.longitude %>
-</p>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+<button type="submit" style="margin-top: 10px;" class="btn btn-primary" >Create trip</button>
+<!--   <div class="form-actions">
+    <%#= f.button :submit ,'new trip', :class => 'btn btn-primary"'%>
+  </div> -->
 <% end %>
  </div>
+ </fieldset>
+ </form>
+ </div>
+<div class="col-md-0"></div>
+ </div>
+
+ </div>
+
 
 <script type="text/javascript">
 function initialize() {

@@ -24,3 +24,19 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+  
+$(window).scroll(function() {
+            
+            if($(window).scrollTop() > 1){// this refers to window
+                $('#mainNav').addClass('navbar-fixed-top1');
+                /*$('#fh5co-logo img').attr("src","images/logo2.png");*/
+            }
+            else {
+                $('#mainNav').removeClass('navbar-fixed-top1');
+                /*$('#fh5co-logo img').attr("src","images/logo.png");*/
+            }
+
+        });
+
+
