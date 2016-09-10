@@ -1,17 +1,107 @@
-<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
-<h2>Forgot your password?</h2>
+<style type="text/css">
+    /*Panels*/
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
+    .panel {
+     border: 0;
+    }
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-  </div>
+    .panel-heading {
+     font-size: 18px;
+     font-weight: 300;
+     letter-spacing: 0.025em;
+     height: 66px;
+     line-height: 45px;
+    }
 
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
-<br>
-<%= render "devise/shared/links" %>
+    .panel-default .panel-heading {
+     background: #fff;
+     border-bottom: 1px solid #eee;
+     color: #5f6468;
+    }
+
+    .panel-footer {
+     background: #fff;
+     border-top: 1px solid #eee;
+    }
+
+    .panel-widget {
+     padding: 0;
+     position: relative;
+    }
+
+    .panel-widget .panel-footer {
+     border: 0;
+     text-align: center;
+    }
+
+    .panel-footer .input-group {
+     padding: 0px;
+     margin: 0 -5px;
+    }
+
+    .panel-footer .input-group-btn:last-child>.btn, 
+    .panel-footer .input-group-btn:last-child>.btn-group {
+     margin: 0;
+    }
+
+    .panel-widget .panel-footer a {
+     color: #999;
+    }
+
+    .panel-widget .panel-footer a:hover {
+     color: #666;
+     text-decoration: none;
+    }
+
+    .panel-blue { background: #30a5ff; color: #fff; }
+    .panel-teal { background: #1ebfae; color: #fff; }
+    .panel-orange { background: #ffb53e; color: #fff; }
+    .panel-red { background: #f9243f; color: #fff; }
+
+    .panel-blue .panel-body p,
+    .panel-teal .panel-body p,
+    .panel-orange .panel-body p,
+    .panel-red .panel-body p { 
+     color: #fff; 
+     color: rgba(255, 255, 255, .8);
+    }
+
+    .panel-blue .panel-heading,
+    .panel-teal .panel-heading,
+    .panel-orange .panel-heading,
+    .panel-red .panel-heading {
+     border-bottom: 1px solid rgba(255, 255, 255, .2);
+    }
+
+    .panel-blue .text-muted,
+    .panel-teal .text-muted,
+    .panel-orange .text-muted,
+    .panel-red .text-muted { 
+     color: rgba(255, 255, 255, .5); 
+    }
+    .margin_top{margin-top: 50px;}
+</style>
+
+
+
+
+<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4 margin_top">
+    <div class="login-panel panel panel-default">
+      <div class="panel-heading">Forgot your password?</div>
+      <div class="panel-body">
+        <form role="form">
+          <fieldset>
+          <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+            <%= f.error_notification %>
+            <div class="form-group">
+              <%= f.input :email, required: true, autofocus: true, :class=>"form-control" %>
+            </div>
+            <%= f.button :submit, "Send me reset password instructions", :class=>"btn btn-primary" %>
+            <br><br>
+            <%= render "devise/shared/links" %>
+            <%end%>
+          </fieldset>
+        </form>
+      </div>
+    </div>
 </div>

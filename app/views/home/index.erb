@@ -111,23 +111,29 @@
     $(window).scroll(function() {
             
             if($(window).scrollTop() > 1){// this refers to window
-                $('.navbar-fixed-top').addClass('navbar-fixed-top1');
+                $('.navbar-fixed-top').addClass('navbar-fixed-top12');
                 $('.navbar-brand').css("color", "red"); 
+                $(".navbar-nav > li > a").css("color", "#222"); 
             }
             else {
-                $('.navbar-fixed-top').removeClass('navbar-fixed-top1');
+                $('.navbar-fixed-top').removeClass('navbar-fixed-top12');
+                $(".navbar-nav > li > a").css("color", "#ddd");
                 /*$('#fh5co-logo img').attr("src","images/logo.png");*/
             }
 
         });
 </script> 
 <style type="text/css">
-.navbar-fixed-top1 {
+.navbar-fixed-top12 {
   background: rgba(255, 255, 255, 0.95);
   position: fixed !important;
   border-bottom: 1px solid #eee;
   transition: all 0.3s ease-in-out;
   z-index: 999;
   height: 72px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ddd;
 }
 </style>

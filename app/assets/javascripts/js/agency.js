@@ -26,17 +26,17 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
   
-$(window).scroll(function() {
+// $(window).scroll(function() {
             
-            if($(window).scrollTop() > 1){// this refers to window
-                $('#mainNav').addClass('navbar-fixed-top1');
-                /*$('#fh5co-logo img').attr("src","images/logo2.png");*/
-            }
-            else {
-                $('#mainNav').removeClass('navbar-fixed-top1');
-                /*$('#fh5co-logo img').attr("src","images/logo.png");*/
-            }
+//             if($(window).scrollTop() > 1){// this refers to window
+//                 $('#mainNav').addClass('navbar-fixed-top1');
+//                 $('#fh5co-logo img').attr("src","images/logo2.png");
+//             }
+//             else {
+//                 $('#mainNav').removeClass('navbar-fixed-top1');
+//                 $('#fh5co-logo img').attr("src","images/logo.png");
+//             }
 
-        });
+//         });
 
 

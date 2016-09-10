@@ -1,6 +1,13 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 6px 12px !important;
+}
+
  body {
     width: 100%;
     height: 100%;
@@ -517,10 +524,10 @@ form {
 .header-content .btn-primary:hover { color: #000 !important;}
 #mainNav, .navbar-default  {
     background-color: transparent;
-    border: 1px solid #999 !important;
+    
 }
 .navbar-default .navbar-nav > li > a {
-    color: #ddd !important;
+    color: #ddd;
 }
 .dashbord .main { display: inline block; margin: 0 auto;}
 .line {
@@ -542,3 +549,4 @@ form {
     display: block;
 
 }
+
