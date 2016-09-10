@@ -182,7 +182,7 @@ header {
   min-height: 300px;
   text-align: center;
   color: #fff;
-  background: url('/images/img/kidinwheelchair.jpg');
+  background-image: image-url('/images/img/kidinwheelchair.jpg');
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
