@@ -460,7 +460,7 @@ header .header-content .header-content-inner hr footer {
   color: #fff !important;
 }
 
-form {
+.panel .panel-default form {
   display: block !important;
   padding-left: 0px !important;
 }
@@ -504,6 +504,7 @@ form {
   border-bottom: 1px solid #eee;
   transition: all 0.3s ease-in-out;
   z-index: 999;
+  height: 72px;
 }
 
 .form-horizontal .control-label {
