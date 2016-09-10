@@ -85,9 +85,11 @@
 <div class="login-panel panel panel-default">
 	<div class="panel-heading">Log in</div>
 	<div class="panel-body">
-		<form role="form">
 			<fieldset>
 			<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+				<div class="red"><%= notice %></div>
+  				<div class="red"><%= alert %></div>
+  				<br>
 				<div class="form-group">
 					
 					<%= f.email_field :email, required: false, autofocus: true,:class => 'form-control',:placeholder => 'E-mail' %>
@@ -106,7 +108,6 @@
 				<%= render "devise/shared/links" %>
 				<%end%>
 			</fieldset>
-		</form>
 	</div>
 </div>
 </div>
