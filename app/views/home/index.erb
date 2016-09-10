@@ -106,3 +106,17 @@
         </div>
     </section>
 
+<script>
+    $(window).scroll(function() {
+            
+            if($(window).scrollTop() > 1){// this refers to window
+                $('.navbar-fixed-top').addClass('navbar-fixed-top1');
+                $('.navbar-brand').css("color", "red"); 
+            }
+            else {
+                $('.navbar-fixed-top').removeClass('navbar-fixed-top1');
+                /*$('#fh5co-logo img').attr("src","images/logo.png");*/
+            }
+
+        });
+</script> 
