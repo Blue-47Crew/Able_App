@@ -232,7 +232,7 @@
 <!-- second form for step2 -->
 <div class="step2 hidden">
   <div class="col-md-12">
-    <h1 class="text-center">Total<span> $35<sup>00</sup></span></h1>
+    <h1 class="text-center">Total<span class = "next_fare"><sup>00</sup></span></h1>
       <h4 class="text-center">Name On Card</h4>
         <div class="col-md-4"></div><div class="col-md-4">  
       <input id="textinput" name="textinput"class="form-control input-md" required="" placeholder="First Name  Last Name" type="text">
@@ -398,6 +398,8 @@ else{
   return false;
 }
 }
+var total = $('.total_fare').html()
+$('.next_fare').html(total)
 }
 </script>
 <style type="text/css">
