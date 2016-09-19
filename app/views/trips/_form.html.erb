@@ -267,8 +267,10 @@
 </div>
 <script type="text/javascript">
 function hide_step1(){
+  calculate_fare();
   $('.step1').addClass('hidden')
   $('.step2').removeClass('hidden')
+  
 }
 function initialize() {
 
@@ -398,7 +400,7 @@ else{
   return false;
 }
 }
-var total = $('.total_fare').html()
+total = $('.total_fare').html()
 $('.next_fare').html(total)
 }
 </script>
