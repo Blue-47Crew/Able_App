@@ -266,10 +266,20 @@
 <% end %>
 </div>
 <script type="text/javascript">
+$(document).keypress(function (e) {
+    if (e.which == 13) {
+        hide_step1()
+        return false;
+    }
+});
+
 function hide_step1(){
-  calculate_fare();
-  $('.step1').addClass('hidden')
-  $('.step2').removeClass('hidden')
+  abc = calculate_fare();
+  if(!error)
+  {
+    $('.step1').addClass('hidden')
+    $('.step2').removeClass('hidden')
+  }
   
 }
 function initialize() {
@@ -311,16 +321,19 @@ console.log(status)
         tfare = calculate_fare_per_mile( distance_in_mile,trip_type,car_type)
         $('.calculation').removeClass('hidden');
         $('.total_miles').html(distance_in_mile+' miles');
-
+        error = false;
       }
       catch(err){
         console.log(err)
         alert("we are unable to calculate fare please pcikup correct locations")
+
+         error = true;
       
       }
     } 
 
     else {
+      error = true;
         alert("Error: " + status);
     }
 }
