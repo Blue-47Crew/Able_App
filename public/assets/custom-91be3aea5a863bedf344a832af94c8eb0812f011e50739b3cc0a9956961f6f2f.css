@@ -480,11 +480,11 @@ header .header-content .header-content-inner hr footer {
 
 #mainNav, .navbar-default {
   background-color: transparent;
-  border: 1px solid #999 !important;
+    border-bottom: 1px solid #999 !important;
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #ddd !important;
+  /*color: #ddd;*/
 }
 
 .dashbord .main {
@@ -498,14 +498,14 @@ header .header-content .header-content-inner hr footer {
   border: none !important;
 }
 
-.navbar-fixed-top1 {
+/*.navbar-fixed-top1 {
   background: rgba(255, 255, 255, 0.95);
   position: fixed !important;
   border-bottom: 1px solid #eee;
   transition: all 0.3s ease-in-out;
   z-index: 999;
   height: 72px;
-}
+}*/
 
 .form-horizontal .control-label {
   padding-top: 7px;

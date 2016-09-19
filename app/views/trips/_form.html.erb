@@ -1,96 +1,251 @@
- <div class="container">
- <div class="row">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
 
-  <div  class="col-md-0"></div>
-  <div  class="col-md-12">
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript"
+     src="http://maps.google.com/maps/api/js?sensor=true">
+</script> 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAsIcyFjyCDVemIvuS9Zvaw58eXFNTBogc&sensor=false&libraries=places"></script>
-
+<div class="container">
 <%= simple_form_for(@trip) do |f| %>
   <%= f.error_notification %>
-<form class="form-horizontal">
+<div class="row">
+<div class="step1">
+  <div  class="col-md-12">
       <fieldset>
 
       <!-- Form Name -->
-      <h1 class="text-center">Start</h1>
-      <div class="form-group">  
-        <div class="col-md-4">
-    <%= f.input :start_address,:class => 'form-control input-md' %>     
+      <h1 class="text-center">New Ride Request</h1>
+
+      <!-- Text input-->
+      <div class="col-md-7">
+        <label class="form-group control-label" for="textinput">Is this transportation for yourself or for a client/loved one? </label>  
         </div>
-        <div class="col-md-4">
-    <%= f.input :start_city ,:class => 'form-control input-md'%>     
-        </div>
-        <div class="col-md-4">
-    <%= f.input :start_state,:class => 'form-control input-md' %>     
-        </div>
-        </div>
-        <div class="form-group">  
-        <div class="col-md-4">
-    <%= f.input :end_address,:class => 'form-control input-md'%>     
-        </div>
-        <div class="col-md-4">
-    <%= f.input :end_address,:class => 'form-control input-md' %>     
-        </div>
-        <div class="col-md-4">
-    <%= f.input :end_zipcode,:class => 'form-control input-md' %>     
-        </div>
-        </div>
-         <div class="form-group">  
-        <div class="col-md-6">
-    <%= f.label :car_type%>
-    <%= f.select(:car_type, ['Wheelchair', 'Single'], {}, { :class => 'form-control' }) %>    
-        </div>
-        <div class="col-md-6">
-    <%= f.label :trip_type%>
-   <%= f.select(:trip_type, ['Roundtrip', 'Single'], {}, { :class => 'form-control' }) %>
-   
-        </div>
-      
-        </div>  
-      
-         <div class="form-group"> 
+        <div class="col-md-5">
+        <select class="form-control">
+        <option>Myself</option>
+        <option>Client/Loved one</option>
+      </select>
          
-        <div class="col-md-2">
-  <button type="button" style="margin-top: 10px;" class="btn btn-primary" onclick="calculate_fare()">Check fare</button>
-</div>
-</div>
+        </div>
+      
+      <!-- Text input-->
+      <div class="col-md-7">
+        <label class="form-group control-label" for="textinput">Check if you need wheelchair accessible transportation?</label>
+        </div>  
+        <div class="col-md-5">
+        <div class="checkbox">
+              <label>
+                <input type="checkbox"> Yes,Wheelchair Accessible 
+              </label>
+          </div> 
+        </div>
+      
+      <div class="col-md-7">
+        <label class="form-group control-label" for="textinput">Do you/your loved on need assistance needed into the vehicle? </label>
+        </div>  
+        <div class="col-md-5">
+        <div class="checkbox">
+              <label>
+                <input type="checkbox"> Yes, Escorted to Car 
+              </label>
+          </div> 
+        </div>
+    
+      <!-- Text input-->
+      <div class="col-md-7">
+        <label class="form-group control-label" for="textinput">If so, what type of assistance is necessary?(Please Explain) </label></div>  
+        <div class="col-md-5">
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+         
+        </div>
+      <div style="clear: both;"></div>
+      <h3 class="text-center">What date and time is your pickup?</h3> 
+      
+      
+      <!-- Text input-->
+      <div class="row">
+      <div class="col-md-3">
+        <label class="form-group control-label" for="textinput">Select a date </label> </div> 
+        <div class="col-md-3">
+        <input id="textinput" name="textinput" type="date" placeholder="Date" class="form-control input-md" required="">
+         
+        </div>
+  
+      <!-- Text input-->
+      <div class="col-md-3">
+        <label class="form-group control-label" for="textinput">Select a time:</label></div>  
+        <div class="col-md-3">
+        <input id="textinput" name="textinput" type="time" placeholder="Company Name" class="form-control input-md" required="">
+         
+        </div>
+        </div>
+        </fieldset>
+      <fieldset>
+      <div class="row">
+        <div class="col-md-3">
+        <label class="form-group control-label" for="textinput">Do you need a return ride?  </label></div>  
+        <div class="col-md-3">
+        <select class="form-control">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+         
+        </div>
+      
+      <div class="col-md-3">
+        <label class="form-group control-label" for="textinput">What time should we arrive for your return ride?</label></div>  
+        <div class="col-md-3">
+        <input id="textinput" name="textinput" type="text" placeholder="Company Name" class="form-control input-md" required="">
+         
+        </div>
+        </div>
+    <div class="row">
+     <div class="col-md-7">
+        <label class="form-group control-label" for="textinput">Do you need to schedule this appointment for another day and/or time?</label>  
+      </div> <div class="col-md-5">
+        <select class="form-control">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+         
+        </div>
+  </div>
+
+      </fieldset>
+      <fieldset>
+      <h3 class="text-center">Enter Pick-Up Location</h3>
+      <div class="row">
+      <div class="col-md-4">
+        <label class="form-group control-label" for="textinput">What kind of location is this?</label>  
+      </div>
+        <div class="col-md-4">
+          <select class="form-control">
+          <option>Other</option>
+          <option>Home</option>
+          <option>Doctor/Medical</option>
+          <option>Errand Location</option>
+        </select>
+      </div>
+        <div class="col-md-4">
+          <%= f.input :start_address  %>
+        </div>
+    </div>
+      
+      <div style="clear: both;"></div>
+      </fieldset>
+
+            <fieldset>
+      <h3 class="text-center">Enter Drop Off Location</h3>
+      <div class="row">
+        <label class="col-md-7 control-label" for="textinput">What kind of destination is this?</label>  
+        <div class="col-md-5">
+        <select class="form-control">
+        <option>Other</option>
+        <option>Home</option>
+        <option>Doctor/Medical</option>
+        <option>Errand Location</option>
+      </select>
+      </div>
+      </div>
+      <div style="clear: both;"></div>
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="form-group">
+          <%= f.label :end_address, 'destination'%>
+          <%= f.text_field :end_address,:class => 'form-control' %>
+        </div>
+        </div>
+      <div class="col-md-4">
+      <div class="form-group">
+    <%= f.label :car_type%>
+   <%= f.select(:car_type, ['Wheelchair', 'saden'], {}, { :class => 'form-control' }) %>
+    </div>
+    </div>
+    <div class="col-md-4">
+    <div class="form-group">
+  <%= f.label :trip_type%>
+   <%= f.select(:trip_type, ['Roundtrip', 'Single'], {}, { :class => 'form-control' }) %>
+    &ensp;
+    </div>
+    </div>
+    </div>
+<div style="clear: both;"></div>
+     
+      </fieldset>
+  
+    <button class="btn btn-info" style="display: block; text-align: center; margin:auto;" type="button" onclick="calculate_fare()">Calculate Trip Payment</button>
+
+<div class="row">
 <div class="calculation hidden">
-<p>
-  <strong>Total Miles</strong>
+<div class="col-md-3">
+  <h4>Total Miles</h4>
   <div class="total_miles">
   </div>
-</p>
+</div>
 
-<p>
-  <strong>Base Fare</strong>
+<div class="col-md-3">
+  <h4>Base Fare</h4>
   <div class="base_fare">
   </div>
-</p>
+</div>
 
 
 
-<p>
-  <strong>Total Fare</strong>
+<div class="col-md-3">
+  <h4>Total Fare</h4>
   <div class="total_fare">
   </div>
-</p>
 </div>
-<button type="submit" style="margin-top: 10px;" class="btn btn-primary" >Create trip</button>
-<!--   <div class="form-actions">
-    <%#= f.button :submit ,'new trip', :class => 'btn btn-primary"'%>
-  </div> -->
+</div>
+
+  <div class="form-actions">
+  <button class="btn btn-info" style="display: block; text-align: center; margin:auto; margin-top: 10px;" type="button" onclick="hide_step1()">Submit/Next</button>
+  </div>
+</div>
+
+ </div>
+ </div> <!-- step1 end -->
+<!-- second form for step2 -->
+<div class="step2 hidden">
+  <div class="col-md-12">
+    <h1 class="text-center">Total<span> $35<sup>00</sup></span></h1>
+      <h4 class="text-center">Name On Card</h4>
+        <div class="col-md-4"></div><div class="col-md-4">  
+      <input id="textinput" name="textinput"class="form-control input-md" required="" placeholder="First Name  Last Name" type="text">
+      </div><div class="col-md-4"></div>
+    <div class="col-md-12"><h4 class="text-center">Card Number</h4></div>
+    <div class="col-md-4"></div><div class="col-md-4">
+      <input id="textinput" name="textinput"class="form-control input-md bord" required="" placeholder="1234 5678 9012 3456" type="text">
+    </div><div class="col-md-4"></div>
+    <div class="col-md-12"><h4 class="text-center">Expiration Date</h4></div>
+    <div class="col-md-4"></div><div class="col-md-4">
+      <input id="textinput" name="textinput"class="form-control input-md bord" required="" placeholder="10/15" type="text">
+    </div><div class="col-md-4"></div>
+    <div class="col-md-12"><h4 class="text-center">Billing Zip Code</h4></div>
+    <div class="col-md-4"></div><div class="col-md-4">
+      <input id="textinput" name="textinput"class="form-control input-md bord" required="" placeholder="12345" type="text">
+      </div><div class="col-md-4"></div>
+     <div class="form-actions text-center"  style="display: block; margin-top: 10px; text-align: center; max-width: 130px; margin: auto;">
+    <%= f.button :submit,'Submit Payment', class: 'btn btn-primary' %>
+  </div>
+  </div>
+</div> <!-- step2 end -->
+
+
+
+<!-- end second form -->
+
+
+
+
+</div>
 <% end %>
- </div>
- </fieldset>
- </form>
- </div>
-<div class="col-md-0"></div>
- </div>
-
- </div>
-
-
+</div>
 <script type="text/javascript">
+function hide_step1(){
+  $('.step1').addClass('hidden')
+  $('.step2').removeClass('hidden')
+}
 function initialize() {
 
 var input = document.getElementById('trip_end_address');
@@ -151,7 +306,7 @@ function calculate_fare_per_mile(mile,trip_type,car_type){
       $('.base_fare').html('$ '+ 20)
       $('.total_fare').html('$' + (20+2*mile))
 }
-else if(trip_type == 'Single' && car_type == "Single"){
+else if(trip_type == 'Single' && car_type == "saden"){
    $('.base_fare').html('$ '+ 15)
    $('.total_fare').html('$' + (15+1.5*mile))
 }
@@ -160,7 +315,7 @@ else if(trip_type == 'Roundtrip' && car_type == "Wheelchair"){
     $('.total_fare').html('$ ' + (60+2*mile))
 
 }
-else if(trip_type == 'Roundtrip' && car_type == "Single"){
+else if(trip_type == 'Roundtrip' && car_type == "saden"){
   $('.base_fare').html('$ '+40)
    $('.total_fare').html('$' + (40+1.5*mile))
 }
@@ -175,7 +330,7 @@ else{
       $('.base_fare').html('$ '+20)
        $('.total_fare').html('$' + (20+2*mile))
     }
-    else if(trip_type == 'Single' && car_type == "Single"){
+    else if(trip_type == 'Single' && car_type == "saden"){
       $('.base_fare').html('$ '+20)
        $('.total_fare').html('$' + (15+1.5*mile))
     }
@@ -183,7 +338,7 @@ else{
     $('.base_fare').html('$ '+80)
      $('.total_fare').html('$' + (80+2*mile))
   }
-  else if(trip_type == 'Roundtrip' && car_type == "Single"){
+  else if(trip_type == 'Roundtrip' && car_type == "saden"){
     $('.base_fare').html('$ '+65)
      $('.total_fare').html('$' +(65+1.5*mile))
   }
@@ -197,7 +352,7 @@ else{
       $('.base_fare').html('$ '+20)
        $('.total_fare').html('$' + (20+2*mile))
 }
-else if(trip_type == 'Single' && car_type == "Single"){
+else if(trip_type == 'Single' && car_type == "saden"){
    $('.base_fare').html('$ '+15)
    $('.total_fare').html('$' + (15+1.5*mile))
 }
@@ -207,7 +362,7 @@ else if(trip_type == 'Roundtrip' && car_type == "Wheelchair"){
    $('.total_fare').html('$' + (2*mile - (discounted_price)))
 
 }
-else if(trip_type == 'Roundtrip' && car_type == "Single"){
+else if(trip_type == 'Roundtrip' && car_type == "saden"){
   $('.base_fare').html('free 20% discount on total')
   discounted_price = 1.5*mile*0.2
    $('.total_fare').html('$' + (1.5*mile - (discounted_price)))
@@ -219,3 +374,46 @@ else{
 }
 }
 </script>
+<style type="text/css">
+  select.form-control:not([size]):not([multiple]) {
+    height: 3.5rem;
+}
+.step2 { background: #fff;}
+.step2 .bord { border: none !important;}
+.step2 h1{    color: #5ed9eb;
+    margin: 0;
+    background: rgba(94,217,235,0.3);
+    font-weight: 700;
+    line-height: 1;
+    padding: 2em 1em;
+    font-size: 1em;
+    letter-spacing: 0.5em;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    box-sizing: border-box;
+    text-align: center;} 
+    .step2 h1 span {
+    color: #5ed9eb;
+    margin: 0 0 0;
+    display: block;
+    font-size: 6em;
+    letter-spacing: -0.06em;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono';
+}
+.step2 h4 { font-weight: 300; margin-bottom: 20px; font-size: 30px !important; }
+.step2 input {
+    display: block;
+    border: none;
+    border-bottom: 2px dotted rgba(0,0,0,0.2);
+    padding: 1.2em 0.2em 0.4em;
+    text-align: center;
+    font-size: 1.2em;
+    width: 100%;
+    color: rgba(0,0,0,0.6);
+    letter-spacing: 0.01em;
+    box-sizing: border-box;
+    background: transparent;
+    font-family: 'Roboto Mono';
+}
+</style>
