@@ -16,7 +16,9 @@
       <h1 class="text-center">New Ride Request</h1>
 
       <!-- Text input-->
-      <div class="col-md-7">
+      <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
         <label class="form-group control-label" for="textinput">Is this transportation for yourself or for a client/loved one? </label>  
         </div>
         <div class="col-md-5">
@@ -26,9 +28,12 @@
       </select>
          
         </div>
-      
+        <div class="col-md-1"></div>
+</div>
       <!-- Text input-->
-      <div class="col-md-7">
+       <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
         <label class="form-group control-label" for="textinput">Check if you need wheelchair accessible transportation?</label>
         </div>  
         <div class="col-md-5">
@@ -38,8 +43,11 @@
               </label>
           </div> 
         </div>
-      
-      <div class="col-md-7">
+      <div class="col-md-1"></div>
+      </div>
+       <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
         <label class="form-group control-label" for="textinput">Do you/your loved on need assistance needed into the vehicle? </label>
         </div>  
         <div class="col-md-5">
@@ -49,13 +57,18 @@
               </label>
           </div> 
         </div>
-    
+    <div class="col-md-1"></div>
+    </div>
       <!-- Text input-->
-      <div class="col-md-7">
+       <div class="row">
+       <div class="col-md-1"></div>
+      <div class="col-md-5">
         <label class="form-group control-label" for="textinput">If so, what type of assistance is necessary?(Please Explain) </label></div>  
         <div class="col-md-5">
         <textarea class="form-control" rows="5" id="comment"></textarea>
          
+        </div>
+        <div class="col-md-1"></div>
         </div>
       <div style="clear: both;"></div>
       <h3 class="text-center">What date and time is your pickup?</h3> 
@@ -74,7 +87,7 @@
       <div class="col-md-3">
         <label class="form-group control-label" for="textinput">Select a time:</label></div>  
         <div class="col-md-3">
-        <input id="textinput" name="textinput" type="time" placeholder="Company Name" class="form-control input-md" required="">
+        <input id="textinput" name="textinput" type="time" placeholder="time" class="form-control input-md" required="">
          
         </div>
         </div>
@@ -94,14 +107,14 @@
       <div class="col-md-3">
         <label class="form-group control-label" for="textinput">What time should we arrive for your return ride?</label></div>  
         <div class="col-md-3">
-        <input id="textinput" name="textinput" type="text" placeholder="Company Name" class="form-control input-md" required="">
+        <input id="textinput" name="textinput" type="time" placeholder="return time" class="form-control input-md" required="">
          
         </div>
         </div>
     <div class="row">
-     <div class="col-md-7">
+     <div class="col-md-6">
         <label class="form-group control-label" for="textinput">Do you need to schedule this appointment for another day and/or time?</label>  
-      </div> <div class="col-md-5">
+      </div> <div class="col-md-6">
         <select class="form-control">
         <option>Yes</option>
         <option>No</option>
@@ -114,6 +127,7 @@
       <fieldset>
       <h3 class="text-center">Enter Pick-Up Location</h3>
       <div class="row">
+      <div class="col-md-2"></div>
       <div class="col-md-4">
         <label class="form-group control-label" for="textinput">What kind of location is this?</label>  
       </div>
@@ -125,9 +139,17 @@
           <option>Errand Location</option>
         </select>
       </div>
+      <div class="col-md-2"></div>
+      </div>
+      <div class="row">
+      <div class="col-md-2"></div>
         <div class="col-md-4">
-          <%= f.input :start_address  %>
+        <label class="form-group control-label" for="textinput">Start Address</label>  
+      </div>
+        <div class="col-md-4">
+          <%= f.text_field :start_address  ,:class => 'form-control'%>
         </div>
+        <div class="col-md-2"></div>
     </div>
       
       <div style="clear: both;"></div>
@@ -136,8 +158,9 @@
             <fieldset>
       <h3 class="text-center">Enter Drop Off Location</h3>
       <div class="row">
-        <label class="col-md-7 control-label" for="textinput">What kind of destination is this?</label>  
-        <div class="col-md-5">
+      <div class="col-md-2"></div>
+        <label class="col-md-4 control-label" for="textinput">What kind of destination is this?</label>  
+        <div class="col-md-4">
         <select class="form-control">
         <option>Other</option>
         <option>Home</option>
@@ -145,6 +168,7 @@
         <option>Errand Location</option>
       </select>
       </div>
+      <div class="col-md-2"></div>
       </div>
       <div style="clear: both;"></div>
       <div class="row">
@@ -249,13 +273,15 @@ function hide_step1(){
 function initialize() {
 
 var input = document.getElementById('trip_end_address');
+var start_address = document.getElementById('trip_start_address');
 var autocomplete = new google.maps.places.Autocomplete(input);
+var autocomplete1 = new google.maps.places.Autocomplete(start_address);
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
 function calculate_fare(){
   console.log('click')
- origin = $('#trip_start_address').val()+","+ $('#trip_start_city').val()+","+$('#trip_start_state').val()
+ origin = $('#trip_start_address').val();
 destination = $('#trip_end_address').val()
 service = new google.maps.DistanceMatrixService();
 
