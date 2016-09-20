@@ -263,6 +263,139 @@
 </div>
 <% end %>
 </div>
+
+  <style>
+.step2 {
+  background: #fff;
+  font-family: 'Roboto';
+}
+.step2 #container {
+  margin: 2em auto 1em;
+  position: relative;
+  box-sizing: border-box;
+}
+.step2 p {
+  margin: 0 0 3em;
+}
+.step2 .fa-lock {
+  position: absolute;
+  color: #5ed9eb;
+  right: 2.3em;
+  top: 1.2em;
+  line-height: 3em;
+  border-radius: 100%;
+}
+.step2 h1 {
+  color: #5ed9eb;
+  margin: 0;
+  background: rgba(94,217,235,0.3);
+  font-weight: 700;
+  line-height: 1;
+  padding: 2em 1em;
+  font-size: 1em;
+  letter-spacing: 0.5em;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  box-sizing: border-box;
+  text-align: center;
+}
+.step2 h1 span {
+  color: #5ed9eb;
+  margin: 0 0 0;
+  display: block;
+  font-size: 6em;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+  font-family: 'Roboto Mono';
+}
+.step2 h1 span:before {
+  content: '$';
+  font-size: 0.5em;
+  position: relative;
+  top: -0.6em;
+  left: -0.2em;
+}
+.step2 h1 span:after {
+  content: '00';
+  font-size: 0.3em;
+  position: relative;
+  letter-spacing: 0.03em;
+  top: -1.7em;
+  right: -0.1em;
+}
+.step2 form {
+  padding-top: 1em;
+  margin: 0;
+  width: 18em;
+  margin: auto;
+  text-align: center;
+}
+.step2 label {
+  color: rgba(0,0,0,0.6);
+  margin-bottom: 0;
+  padding: 0.1em 0.5em;
+  width: 100%;
+  font-size: 0.8em;
+ 
+}
+.step2 input {
+  display: block;
+  border: none;
+  border-bottom: 2px dotted rgba(0,0,0,0.2);
+  text-align: center;
+  font-size: 1.2em;
+  width: 100%;
+  color: rgba(0,0,0,0.6);
+  letter-spacing: 0.01em;
+  box-sizing: border-box;
+  background: transparent;
+  font-family: 'Roboto Mono';
+  margin-bottom: 10px;
+}
+.step2 input:focus {
+  outline: none;
+  border-bottom: 2px solid #5ed9eb;
+  background: transparent;
+}
+.step2 input[type="submit"] {
+  width: 120%;
+   background: #5ed9eb;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 13px;
+  border-radius: 3px;
+  font-weight: bold;
+  font-family: 'Roboto';
+}
+.step2 input[type="submit"]:hover {
+  background: #5ed9eb;
+  border-color: #5ed9eb;
+  color: #fff;
+}
+.step2 ::-webkit-input-placeholder {
+  color: rgba(0,0,0,0.16);
+}
+:-moz-placeholder {
+/* Firefox 18- */
+  color: rgba(0,0,0,0.2);
+  font-style: italic;
+}
+ ::-moz-placeholder {
+/* Firefox 19+ */
+  color: rgba(0,0,0,0.2);
+  font-style: italic;
+}
+:-ms-input-placeholder {
+  color: rgba(0,0,0,0.2);
+  font-style: italic;
+}
+
+</style>
+
 <script type="text/javascript">
 $(document).keypress(function (e) {
     if (e.which == 13) {
@@ -420,7 +553,7 @@ $('.next_fare').html(total)
     height: 3.5rem;
 }
 .step2 { background: #fff;}
-.step2 .bord { border: none !important;}
+
 .step2 h1{    color: #5ed9eb;
     margin: 0;
     background: rgba(94,217,235,0.3);
@@ -443,7 +576,7 @@ $('.next_fare').html(total)
     font-family: 'Roboto Mono';
 }
 .step2 h4 { font-weight: 300; margin-bottom: 20px; font-size: 30px !important; }
-.step2 input {
+/*.step2 input {
     display: block;
     border: none;
     border-bottom: 2px dotted rgba(0,0,0,0.2);
@@ -456,5 +589,15 @@ $('.next_fare').html(total)
     box-sizing: border-box;
     background: transparent;
     font-family: 'Roboto Mono';
+}*/
+/*.step2 .bord {
+    border-bottom: 2px #999 dotted !important;
+}*/
+
+.step2 .form-control:focus {
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+    box-shadow: none !important;
 }
 </style>
