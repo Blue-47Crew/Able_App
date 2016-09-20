@@ -628,10 +628,11 @@ a.bg-danger:hover {
 }
 
 h1.page-header {
-	margin-top: 30px;
+	margin-top: 60px;
 	border-bottom: 0;
 }
-
+.sidebar form {
+    padding: 40px 8px 40px !important; }
 /*Charts*/
 
 .main-chart {

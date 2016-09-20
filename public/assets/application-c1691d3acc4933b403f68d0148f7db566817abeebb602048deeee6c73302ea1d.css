@@ -10112,34 +10112,39 @@ a.bg-danger:hover {
 
 /* line 630, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 h1.page-header {
-  margin-top: 30px;
+  margin-top: 60px;
   border-bottom: 0;
 }
 
+/* line 634, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+.sidebar form {
+  padding: 40px 8px 40px !important;
+}
+
 /*Charts*/
-/* line 637, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 638, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .main-chart {
   background: #fff;
 }
 
-/* line 641, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 642, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .easypiechart-panel {
   text-align: center;
   padding: 1px 0;
   margin-bottom: 20px;
 }
 
-/* line 647, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 648, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .placeholder h2 {
   margin-bottom: 0px;
 }
 
-/* line 651, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 652, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .donut {
   width: 100%;
 }
 
-/* line 655, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 656, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .easypiechart {
   position: relative;
   text-align: center;
@@ -10148,7 +10153,7 @@ h1.page-header {
   margin: 20px auto 10px auto;
 }
 
-/* line 663, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 664, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .easypiechart .percent {
   display: block;
   position: absolute;
@@ -10157,44 +10162,44 @@ h1.page-header {
   width: 120px;
 }
 
-/* line 671, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 672, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 #easypiechart-blue .percent {
   color: #30a5ff;
 }
 
-/* line 672, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 673, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 #easypiechart-teal .percent {
   color: #1ebfae;
 }
 
-/* line 673, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 674, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 #easypiechart-orange .percent {
   color: #ffb53e;
 }
 
-/* line 674, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 675, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 #easypiechart-red .percent {
   color: #ef4040;
 }
 
 /*Calendar Widget*/
-/* line 678, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 679, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 #calendar, .datepicker-inline {
   width: 100%;
 }
 
-/* line 682, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 683, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 #calendar table {
   width: 100%;
 }
 
-/* line 686, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 687, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .datepicker table tr td.old,
 .datepicker table tr td.new {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* line 691, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 692, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .datepicker table tr td.active,
 .datepicker table tr td.active:hover,
 .datepicker table tr td.active.disabled,
@@ -10224,7 +10229,7 @@ h1.page-header {
   border-color: #285e8e;
 }
 
-/* line 720, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 721, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .datepicker table tr td span:hover,
 .datepicker thead tr:first-child th:hover,
 .datepicker tfoot tr th:hover,
@@ -10233,25 +10238,25 @@ h1.page-header {
   background: rgba(0, 0, 0, 0.25);
 }
 
-/* line 728, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 729, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .panel-heading .glyphicon {
   margin-right: 10px;
 }
 
 /*Todo List Widget*/
-/* line 734, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 735, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .todo-list-item .glyphicon {
   margin-right: 5px;
   color: #9fadbb;
 }
 
-/* line 739, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 740, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .todo-list-item .glyphicon:hover {
   margin-right: 5px;
   color: #1b3548;
 }
 
-/* line 744, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 745, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .todo-list {
   padding: 0;
   margin: -15px;
@@ -10259,99 +10264,99 @@ h1.page-header {
   color: #5f6468;
 }
 
-/* line 751, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 752, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 #checkbox {
   margin: 0;
 }
 
-/* line 755, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 756, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .todo-list .checkbox {
   display: inline-block;
   margin: 0px;
 }
 
-/* line 760, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 761, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .panel-body input[type=checkbox]:checked + label {
   text-decoration: line-through;
   color: #777;
 }
 
-/* line 765, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 766, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .todo-list-item {
   list-style: none;
   line-height: 0.9;
   padding: 14px 15px 8px 15px;
 }
 
-/* line 771, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 772, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .todo-list-item:hover, a.todo-list-item:focus {
   text-decoration: none;
   background-color: #f6f6f6;
 }
 
-/* line 776, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 777, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .todo-list-item .trash .glyph:hover {
   color: #ef4040;
 }
 
 /*Chat Widget*/
-/* line 783, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 784, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .chat ul {
   list-style: none;
   margin: -15px;
   padding: 15px;
 }
 
-/* line 789, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 790, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .chat ul li {
   margin-bottom: 10px;
   padding: 15px 5px;
   border-bottom: 1px solid #eee;
 }
 
-/* line 795, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 796, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .chat ul li.left .chat-body {
   margin-left: 100px;
 }
 
-/* line 796, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 797, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .chat ul li.right .chat-body {
   margin-right: 100px;
 }
 
-/* line 798, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 799, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .chat ul li .chat-body p {
   margin: 0;
 }
 
-/* line 802, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 803, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .chat ul .glyphicon {
   margin-right: 5px;
 }
 
-/* line 806, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 807, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .chat .panel-body {
   overflow-y: scroll;
   height: 300px;
 }
 
-/* line 811, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 812, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .chat-body small {
   margin-left: 5px;
 }
 
 /*Tables*/
-/* line 816, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 817, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .table {
   background: #fff;
 }
 
-/* line 820, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 821, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .fixed-table-container {
   border: 1px solid #eee;
 }
 
-/* line 824, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 825, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .fixed-table-container thead th {
   background: #f7f7f8;
   border-color: #ddd;
@@ -10360,36 +10365,36 @@ h1.page-header {
   font-size: 16px;
 }
 
-/* line 832, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 833, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .fixed-table-container tbody td {
   border: 1px solid #eee;
 }
 
-/* line 836, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 837, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .fixed-table-container tbody td:last-child {
   border-right: none;
 }
 
-/* line 840, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 841, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .table > thead > tr > th {
   border-bottom: 1px solid #e6e7e8;
   vertical-align: middle;
   height: 50px;
 }
 
-/* line 846, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 847, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .fixed-table-pagination .pagination {
   margin-top: 10px;
   margin-bottom: 0px;
 }
 
-/* line 850, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 851, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .fixed-table-pagination .pagination-detail {
   margin-top: 20px;
 }
 
 /*Icons*/
-/* line 857, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 858, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .sidebar .glyph, .user-menu .glyph {
   height: 16px;
   width: 16px;
@@ -10397,12 +10402,12 @@ h1.page-header {
   stroke-width: 3px;
 }
 
-/* line 864, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 865, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .user-menu .glyph {
   stroke-width: 4px;
 }
 
-/* line 868, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 869, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .breadcrumb .glyph {
   height: 14px;
   width: 14px;
@@ -10410,19 +10415,19 @@ h1.page-header {
   stroke-width: 4px;
 }
 
-/* line 875, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 876, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .alert .glyph, .panel-heading .glyph {
   width: 26px;
   height: 26px;
   stroke-width: 2px;
 }
 
-/* line 882, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 883, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .panel-widget .glyph {
   stroke-width: 2px;
 }
 
-/* line 886, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 887, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .todo-list .glyph {
   width: 14px;
   height: 14px;
@@ -10430,14 +10435,14 @@ h1.page-header {
   color: #999;
 }
 
-/* line 893, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 894, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .glyph.table {
   background: none;
   border: none;
 }
 
 /*Icon Grid*/
-/* line 900, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 901, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .icon-grid div {
   border: 1px solid #ddd;
   margin: 0 0 -1px -1px;
@@ -10445,19 +10450,19 @@ h1.page-header {
   padding: 10px 0 20px 0;
 }
 
-/* line 907, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 908, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .icon-grid svg {
   width: 35%;
   display: block;
   margin: 0 auto;
 }
 
-/* line 913, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 914, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .icon-grid h4 {
   display: none;
 }
 
-/* line 917, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
+/* line 918, /home/techverx/projects/Able_App/app/assets/stylesheets/customer.scss */
 .icon-grid pre {
   margin: 10px 10px -10px 10px;
   border-radius: 0;
